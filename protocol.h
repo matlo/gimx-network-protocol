@@ -26,7 +26,7 @@ typedef struct PACKED
   struct PACKED
   {
     uint8_t index; // 1 MSB: 0 = relative axis, 1 = absolute axis, 7 LSB = index
-    uint32_t value;
+    uint32_t value; // network byte order
   } axes[0];
 } s_network_packet_in_report;
 
