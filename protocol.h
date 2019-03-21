@@ -17,6 +17,8 @@
 typedef enum {
     E_NETWORK_PACKET_CONTROLLER,
     E_NETWORK_PACKET_IN_REPORT,
+    E_NETWORK_PACKET_EXIT,
+    E_NETWORK_PACKET_SETCONFIG,
 } e_network_packet_type;
 
 typedef struct PACKED
@@ -35,5 +37,13 @@ typedef struct PACKED
   uint8_t packet_type; // E_NETWORK_PACKET_CONTROLLER
   uint8_t controller_type;
 } s_network_packet_controller;
+
+typedef struct PACKED
+{
+  uint8_t packet_type;
+  float sensibility;
+  int16_t dead_zone_X;
+  int16_t dead_zone_Y;
+}s_network_packet_config;
 
 #endif /* GIMX_NETWORK_PROTOCOL_H_ */
