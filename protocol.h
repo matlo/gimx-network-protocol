@@ -20,6 +20,7 @@ typedef enum {
     E_NETWORK_PACKET_EXIT,
     E_NETWORK_PACKET_SETCONFIG,
     E_NETWORK_PACKET_GETCONFIG,
+    E_NETWORK_PACKET_SAVECALIBRATION, 
 } e_network_packet_type;
 
 typedef struct PACKED
