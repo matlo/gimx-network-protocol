@@ -40,12 +40,19 @@ typedef struct PACKED
   uint8_t controller_type;
 } s_network_packet_controller;
 
+/**
+ * When adding new attributes to this struct, add it to the end.
+ */
 typedef struct PACKED
 {
   uint8_t packet_type;
   float sensibility;
-  int16_t dead_zone_X;
-  int16_t dead_zone_Y;
+  int16_t dead_zone_x;
+  int16_t dead_zone_y;
+  float yx_ratio;
+  float exponent_x;
+  float exponent_y;
+
 }s_network_packet_config;
 
 #endif /* GIMX_NETWORK_PROTOCOL_H_ */
